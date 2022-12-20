@@ -8,7 +8,7 @@ on:
 name: Build & Release
 
 jobs:
-bump-version:
+  bump-version:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -51,6 +51,7 @@ bump-version:
           node-version: '16.16'
       - run: yarn install --frozen-lockfile
       - run: yarn build
+      
   create-github-release:
     name: Create GitHub Release
     runs-on: ubuntu-latest
