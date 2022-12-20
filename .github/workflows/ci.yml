@@ -24,7 +24,7 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v3
         - name: Create Release
-          run: gh release create ${{ github.ref }} --generate-notes
+          run: gh release create Release --generate-notes
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   bump-version:
